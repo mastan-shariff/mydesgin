@@ -1,0 +1,148 @@
+
+.co
+{
+position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+} 
+
+
+.main-title{
+    font-size: 4em;
+    margin-bottom: 50px;
+  }
+  
+  .cont{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cont .im{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .cont .im img{
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  } 
+  .inf-title{
+      padding-left: 45px;
+  } 
+  .para{
+    padding-right: 426px;
+    padding-left: 45px
+  }  
+  .para1{
+    padding-right: 0px;
+    padding-left: 0px
+  } 
+  .di img{
+      height: 245px;
+  } 
+
+  .cont .text-box{
+    z-index: 222;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform: translate(-80px, 50px);
+  }
+  
+  .cont .text-box h3{
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .media-icons{
+    margin-top: 100px;
+  }
+  
+  .media-icons a{
+    color: #fff;
+    font-size: 2em;
+    margin: 60px;
+  }
+  
+  .section-title{
+    font-size: 3em;
+    margin-bottom: 80px;
+  }
+  
+  .inf-title{
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .inf{
+    width: 700px;
+    margin-left: 0px; 
+  } 
+  .inf1
+  {
+      margin: 0px 0px 12px 550px;
+  }
+  
+  .media-inf{
+    width: 400px;
+    margin-left: 50px;
+  }
+  
+  .media-inf li{
+    list-style: none;
+    font-size: 1.4em;
+  }
+  
+  .media-inf li a{
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .media-inf li:not(:last-child){
+    margin-bottom: 50px;
+  }
+  
+  .media-inf li:nth-child(1), .media-inf li:nth-child(5){
+    padding-left: 100px;
+  }
+  
+  .media-inf li:nth-child(2), .media-inf li:nth-child(4){
+    padding-left: 50px;
+  } 
+  .dio 
+  {
+    
+      height: 90px;
+  }  
+  .dio .i
+  {
+      transform: rotate(208deg); 
+      padding-right: 500px;
+    padding-left: 863px;
+    padding-bottom: 0px;
+    padding-top: 0px; 
+    width: 250px;
+  } 
+ 
+  .con
+  {
+      padding-top: 30px; 
+      margin: 0px;
+  }
+ 

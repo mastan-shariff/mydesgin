@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    
+    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="style2.css"> 
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>  
+
+<!--link rey style2.css veray file-->
+    <!-- <link rel="stylesheet" href="style2.css">  -->
+    <script src="https://unpkg.com/scrollreveal"></script> 
+    
+  </head>
+  <body> 
+
+
+
+
+    
+<!-- <section class="sec"> -->  
+  <div class="basheer"> 
+
+
+    <header>
+      <div class="nav-bar">
+        <a href="" class="logo">Logo</a>
+        <div class="navigation">
+          <div class="nav-items">
+            <i class="uil uil-times nav-close-btn"></i>
+            <a href="#"><i class="uil uil-home"></i> Home</a>
+            <a href="#"><i class="uil uil-compass"></i> Explore</a>
+            <a href="#"><i class="uil uil-info-circle"></i> About</a>
+            <a href="#"><i class="uil uil-document-layout-left"></i> Blog</a>
+            <a href="#"><i class="uil uil-envelope"></i> Contact</a>
+          </div>
+        </div>
+        <i class="uil uil-apps nav-menu-btn"></i>
+      </div>
+    </header>
+    <div class="img-slider">
+      <div class="slide active">
+        <img src="1.jpg" alt="">
+        <div class="info">
+          <h2>Slide 01</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="2.jpg" alt="">
+        <div class="info">
+          <h2>Slide 02</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="3.jpg" alt="">
+        <div class="info">
+          <h2>Slide 03</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="4.jpg" alt="">
+        <div class="info">
+          <h2>Slide 04</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="5.jpg" alt="">
+        <div class="info">
+          <h2>Slide 05</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+      </div>
+    </div>   
+  </div>
+    <!-- <section> -->
+    <div>
+      
+    </div> 
+  </section>
+  <!-- </section> -->
+    <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+    </script> 
+
+
+
+
+
+<section class="sec-01">
+  <div class="container">
+    <h2 class="main-title">Reveal Elements On Scroll</h2>
+    <div class="content">
+      <div class="image">
+        <img src="1.jpg" alt="">
+      </div>
+      <div class="text-box">
+        <h3>Lorem Ipsum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </div>
+    </div>
+    <div class="media-icons">
+      <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</section>
+<section class="sec-02">
+  <div class="container">
+    <h3 class="section-title">Lorem Ipsum</h3>
+    <div class="content">
+      <div class="image">
+        <img src="2.jpg" alt="">
+      </div>
+      <div class="info">
+        <h4 class="info-title">Description</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec-03">
+  <div class="container">
+    <h3 class="section-title">Lorem Ipsum</h3>
+    <div class="content">
+      <div class="media-info">
+        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+        <li><a href="#"><i class="fab fa-youtube"></i> Youtube</a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+      </div>
+      <div class="image">
+        <img src="3.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<script>
+  //common reveal options to create reveal animations
+ScrollReveal({ reset: true });
+
+ScrollReveal().reveal(".show-once", {
+  reset: false
+});
+
+
+  ScrollReveal({
+    reset: true,
+    distance: '60px',
+    duration: 2500,
+    delay: 100
+  });
+
+  //target elements, and specify options to create reveal animations
+  ScrollReveal().reveal('.main-title, .section-title', { delay: 500, origin: 'left' });
+  ScrollReveal().reveal('.sec-01 .image, .info', { delay: 600, origin: 'bottom' });
+  ScrollReveal().reveal('.text-box', { delay: 700, origin: 'right' });
+  ScrollReveal().reveal('.media-icons i', { delay: 500, origin: 'bottom', interval: 200 });
+  ScrollReveal().reveal('.sec-02 .image, .sec-03 .image', { delay: 500, origin: 'top' });
+  ScrollReveal().reveal('.media-info li', { delay: 500, origin: 'left', interval: 200 });
+</script> 
+    <div class="img-container">This is homepage</div>
+    <div class="bottom-section">
+      <h3>Scroll top to hide</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+        excepturi vero beatae quae mollitia blanditiis minima ab repellendus
+        ipsa nihil.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda qui
+        harum velit optio perspiciatis eaque cum, sapiente animi beatae quod
+        facilis tempore, ipsa fugit, aspernatur hic! Ipsa aspernatur dolorem,
+        veritatis quae, fugiat adipisci id laborum, neque officia ratione
+        facere. Tenetur!
+      </p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script >
+       let bgImage = document.querySelector(".img-container");
+      //  Now registering thescrollTrigger plugin to gsap
+      gsap.registerPlugin(ScrollTrigger);
+      // Now we are going to animate
+
+      gsap.fromTo(
+        bgImage,
+        {
+          clipPath: "circle(5% at 77% 40%)",
+        },
+        {
+          clipPath: "circle(75% at 50% 50%)",
+          ease: "none",
+          //  We want to do that animation on scroll
+          scrollTrigger: {
+            trigger: bgImage,
+            scrub: 1,
+            start: "top center",
+            end: "top center-=200",
+          },
+        }
+      );
+    </script>
+
+<center>><h1 style="color: white;">OUR ACHIENEMENTS</h1></center>
+<div class="accordian"> 
+  
+	<ul>
+		<li>
+			<div class="image_title">
+				<a href="#">master</a> 
+       
+			</div>
+			<a href="#">
+				<!-- <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg"/>   -->
+        <img src="1.jpg" alt="">
+        
+			</a>
+		</li>
+		<li>
+			<div class="image_title">
+				<a href="#">beast</a> 
+      </div>
+			<a href="#">
+				<!-- <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg"/> --> 
+        <img src="2.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<div class="image_title"> 
+          <p>
+        djhfgdhghdghdfuhg
+        fghdfjhfdg
+        fjhgdfjghdfhgjfhgfd
+        dfjhgfjgdg\
+        fkhgdjfgdghkfghdfkhg
+        bfjhdhfg
+        </p>
+				<a href="#">bigil</a>
+			</div>
+			<a href="#">
+				<!-- <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg"/> -->
+        <img src="3.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<div class="image_title">
+				<a href="#">kolamavu kokila</a>
+			</div>
+			<a href="#">
+				<!-- <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg"/> -->
+        <img src="4.jpg" alt="">
+			</a>
+		</li>
+		<li>
+			<div class="image_title">
+				<a href="#">khaka kakha</a> 
+          jdhfgdfdf
+          dfgdsvhfdghgfd
+          </p>
+			</div>
+			<a href="#">
+				<!-- <img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg"/>  -->
+        <img src="5.jpg" alt="">
+        <p>
+          jdhfgdfdf
+          dfgdsvhfdghgfd
+          </p>
+			</a>
+		</li>
+	</ul>
+</div>
+
+ 
+
+
+
+
+<
+
+
+
+<div class="co">
+  <h3 class="st">user guid</h3>
+  <div class="cont"> 
+      <div class="inf">
+    <div class="im">
+      <img src="sup.jpg" alt="">  
+    </div>
+    
+      <h4 class="inf-title">Create an Account</h4>
+      <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+      .</p> 
+    </div> 
+  </div>  
+
+  <div class="di">
+      <img src="d2.png" alt="">  
+    </div> 
+
+
+    <!-- <div class="co">
+     
+      <div class="cont">
+        <div class="inf">
+          <h4 class="inf-title">Description</h4>
+          <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          .</p> 
+          <div class="im">
+              <img src="sup.jpg" alt="">  
+            </div> 
+        </div> 
+      </div>  --> 
+      <div class="co">
+          <!-- <h3 class="st">user guid</h3> -->
+          <div class="cont"> 
+              <div class="inf1">
+            <div class="im">
+              <img src="lin.jpg" alt="">  
+            </div>
+            
+              <h4 class="inf-title">Login</h4>
+              <p class="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              .</p> 
+            </div> 
+          </div>   
+
+          <div class="di">
+              <img src="d3.png" alt="" class="i">  
+            </div>  
+
+            <div class="co" id="con">
+              
+              <div class="cont"> 
+                  <div class="inf">
+                <div class="im">
+                  <img src="gw.jpg" alt="">  
+                </div>
+                
+                  <h4 class="inf-title">Give waste to binman</h4>
+                  <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                  .</p> 
+                </div> 
+              </div>  
+      
+              <div class="di">
+                  <img src="d2.png" alt="">  
+                </div>  
+
+                <div class="co">
+                  <!-- <h3 class="st">user guid</h3> -->
+                  <div class="cont"> 
+                      <div class="inf1">
+                    <div class="im">
+                      <img src="ua.jpg" alt="">  
+                    </div>
+                    
+                      <h4 class="inf-title">He will update ur acc with coins</h4>
+                      <p class="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                      .</p> 
+                    </div> 
+                  </div>  
+                  <div class="di">
+                      <img src="d3.png" alt="" class="i">  
+                    </div>
+
+                    <div class="co" id="con">
+              
+                      <div class="cont"> 
+                          <div class="inf">
+                        <div class="im">
+                          <img src="cc.jpg" alt="">  
+                        </div>
+                        
+                          <h4 class="inf-title">Conins credited</h4>
+                          <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                          .</p> 
+                        </div> 
+                      </div> 
+           
+
+                      <div class="di">
+                          <img src="d2.png" alt="">  
+                        </div>  
+  
+                        <div class="co">
+                          <!-- <h3 class="st">user guid</h3> -->
+                          <div class="cont"> 
+                              <div class="inf1">
+                            <div class="im">
+                              <img src="mp.jpg" alt="">  
+                            </div>
+                            
+                              <h4 class="inf-title">Make payment</h4>
+                              <p class="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                              .</p> 
+                            </div> 
+                          </div>   
+
+
+                          <div class="di">
+                              <img src="d3.png" alt="" class="i">  
+                            </div>
+  
+                            <div class="co" id="con">
+                      
+                              <div class="cont"> 
+                                  <div class="inf">
+                                <div class="im">
+                                  <img src="mg.jpg" alt="">  
+                                </div>
+                                
+                                  <h4 class="inf-title">Save Earth</h4>
+                                  <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                  .</p> 
+                                </div> 
+                              </div> 
+
+      <script>
+          //common reveal options to create reveal animations
+        ScrollReveal({ reset: true });
+        
+        ScrollReveal().reveal(".show-once", {
+          reset: false
+        });
+        
+        
+          ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 100
+          });
+        
+          //target elements, and specify options to create reveal animations
+          ScrollReveal().reveal('.main-title, .st', { delay: 500, origin: 'left' });
+          ScrollReveal().reveal('.sec-01 .im, .inf', { delay: 600, origin: 'bottom' }); 
+          ScrollReveal().reveal('.sec-01 .im, .inf1', { delay: 600, origin: 'bottom' });
+          ScrollReveal().reveal('.text-box', { delay: 700, origin: 'right' });
+          ScrollReveal().reveal('.media-icons i', { delay: 500, origin: 'bottom', interval: 200 });
+          ScrollReveal().reveal('.sec-02 .im, .sec-03 .im', { delay: 500, origin: 'top' });
+          ScrollReveal().reveal('.media-inf li', { delay: 500, origin: 'left', interval: 200 });
+        </script> 
+
+
+  </body>
+</html>
